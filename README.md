@@ -49,4 +49,4 @@ This project simulates privacy and IRB compliance for demonstration purposes. No
 - Enhance documentation and client-facing summaries
 
 ## Contact
-For more information, reach out to Justin or view the job description in the repository.
+For more information, reach out to Justin. 
