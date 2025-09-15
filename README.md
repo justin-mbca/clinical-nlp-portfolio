@@ -42,11 +42,22 @@ flowchart TD
 This project simulates privacy and IRB compliance for demonstration purposes. No real patient data is used.
 
 ## Further Development
-- Integrate real or more complex synthetic datasets
-- Expand NLP with custom entity recognition and context analysis
-- Explore additional models (e.g., random forest, XGBoost)
-- Add privacy/compliance checks and reporting modules
-- Enhance documentation and client-facing summaries
+
+## Expanding Disease Risk Prediction
+
+This pipeline can be easily extended to predict risk for other diseases. Currently, diabetes, hypertension, and asthma are included. To add more:
+
+- Update the target variable to the disease of interest (e.g., heart failure, COPD, depression)
+- Use the same feature engineering and modeling steps
+- For multi-class prediction, use multiclass classifiers (e.g., multinomial logistic regression, random forest)
+
+**Examples of diseases to expand:**
+- Heart failure
+- COPD
+- Depression
+- Any disease present in the dataset
+
+See the notebook for code examples and guidance.
 
 ## Contact
 For more information, reach out to Justin. 
