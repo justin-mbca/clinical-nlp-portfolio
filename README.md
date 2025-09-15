@@ -4,12 +4,22 @@ A portfolio project demonstrating expertise in Natural Language Processing (NLP)
 
 ## Project Overview
 This repository showcases:
-- ETL pipelines for clinical and healthcare data
-- NLP models for disease phenotype extraction
-- Predictive modeling for clinical outcomes
-- Statistical analysis and validation
-- Compliance simulation (privacy, IRB)
-- Client-ready reporting and visualizations
+
+## Workflow Diagram
+
+Below is a visual summary of the end-to-end workflow using Mermaid:
+
+```mermaid
+flowchart TD
+	A[Start: Synthetic Clinical Data] --> B[ETL: Load & Clean Data]
+	B --> C[NLP: Rule-based Extraction]
+	B --> D[NLP: spaCy NER]
+	C --> E[Feature Engineering]
+	D --> E
+	E --> F[Predictive Modeling (Logistic Regression)]
+	F --> G[Model Evaluation & Visualization]
+	G --> H[Interpretation & Reporting]
+```
 
 ## Structure
 - `data/` – Sample clinical notes and EHR data (de-identified)
