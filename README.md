@@ -16,7 +16,7 @@ flowchart TD
 	B --> D[NLP: spaCy NER]
 	C --> E[Feature Engineering]
 	D --> E
-	E --> F[Predictive Modeling (Logistic Regression)]
+	E --> F[Predictive Modeling - Logistic Regression]
 	F --> G[Model Evaluation & Visualization]
 	G --> H[Interpretation & Reporting]
 ```
