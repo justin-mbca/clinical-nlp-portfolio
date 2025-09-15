@@ -1,0 +1,101 @@
+patient_id,age,gender,disease,symptoms,clinical_note
+1,71,F,diabetes,cough,Patient presents with cough. History of diabetes.
+2,27,F,asthma,"headache, fatigue","Patient presents with headache, fatigue. History of asthma."
+3,73,M,diabetes,chest pain,Patient presents with chest pain. History of diabetes.
+4,85,M,hypertension,"nausea, headache","Patient presents with nausea, headache. History of hypertension."
+5,19,F,diabetes,fatigue,Patient presents with fatigue. History of diabetes.
+6,27,M,heart failure,fatigue,Patient presents with fatigue. History of heart failure.
+7,45,F,asthma,headache,Patient presents with headache. History of asthma.
+8,67,M,depression,"nausea, chest pain, shortness of breath","Patient presents with nausea, chest pain, shortness of breath. History of depression."
+9,28,M,COPD,chest pain,Patient presents with chest pain. History of COPD.
+10,77,F,heart failure,headache,Patient presents with headache. History of heart failure.
+11,24,F,diabetes,headache,Patient presents with headache. History of diabetes.
+12,66,M,heart failure,"fatigue, chest pain, cough","Patient presents with fatigue, chest pain, cough. History of heart failure."
+13,19,F,hypertension,cough,Patient presents with cough. History of hypertension.
+14,75,M,asthma,"nausea, fatigue","Patient presents with nausea, fatigue. History of asthma."
+15,81,F,asthma,"chest pain, nausea","Patient presents with chest pain, nausea. History of asthma."
+16,20,F,asthma,"chest pain, nausea, headache","Patient presents with chest pain, nausea, headache. History of asthma."
+17,70,F,diabetes,"headache, cough, fatigue","Patient presents with headache, cough, fatigue. History of diabetes."
+18,60,M,asthma,nausea,Patient presents with nausea. History of asthma.
+19,46,F,asthma,"chest pain, headache","Patient presents with chest pain, headache. History of asthma."
+20,32,M,depression,"nausea, headache, cough","Patient presents with nausea, headache, cough. History of depression."
+21,34,F,COPD,"cough, fatigue, chest pain","Patient presents with cough, fatigue, chest pain. History of COPD."
+22,84,F,hypertension,shortness of breath,Patient presents with shortness of breath. History of hypertension.
+23,52,F,asthma,chest pain,Patient presents with chest pain. History of asthma.
+24,72,F,asthma,"cough, nausea","Patient presents with cough, nausea. History of asthma."
+25,65,F,diabetes,"chest pain, cough","Patient presents with chest pain, cough. History of diabetes."
+26,88,M,heart failure,nausea,Patient presents with nausea. History of heart failure.
+27,21,F,diabetes,cough,Patient presents with cough. History of diabetes.
+28,43,F,depression,shortness of breath,Patient presents with shortness of breath. History of depression.
+29,87,F,hypertension,"headache, nausea, fatigue","Patient presents with headache, nausea, fatigue. History of hypertension."
+30,72,M,hypertension,nausea,Patient presents with nausea. History of hypertension.
+31,25,F,asthma,"nausea, headache","Patient presents with nausea, headache. History of asthma."
+32,62,F,hypertension,chest pain,Patient presents with chest pain. History of hypertension.
+33,22,F,diabetes,"fatigue, headache","Patient presents with fatigue, headache. History of diabetes."
+34,79,F,heart failure,"shortness of breath, fatigue","Patient presents with shortness of breath, fatigue. History of heart failure."
+35,65,M,hypertension,chest pain,Patient presents with chest pain. History of hypertension.
+36,85,F,heart failure,"fatigue, nausea, shortness of breath","Patient presents with fatigue, nausea, shortness of breath. History of heart failure."
+37,33,F,diabetes,"cough, shortness of breath, chest pain","Patient presents with cough, shortness of breath, chest pain. History of diabetes."
+38,90,M,asthma,nausea,Patient presents with nausea. History of asthma.
+39,21,M,heart failure,shortness of breath,Patient presents with shortness of breath. History of heart failure.
+40,87,F,heart failure,"cough, fatigue","Patient presents with cough, fatigue. History of heart failure."
+41,71,F,COPD,"cough, fatigue","Patient presents with cough, fatigue. History of COPD."
+42,20,F,heart failure,"fatigue, cough, chest pain","Patient presents with fatigue, cough, chest pain. History of heart failure."
+43,74,M,diabetes,shortness of breath,Patient presents with shortness of breath. History of diabetes.
+44,68,F,asthma,"fatigue, nausea","Patient presents with fatigue, nausea. History of asthma."
+45,80,F,hypertension,shortness of breath,Patient presents with shortness of breath. History of hypertension.
+46,65,F,hypertension,chest pain,Patient presents with chest pain. History of hypertension.
+47,77,M,depression,"headache, nausea","Patient presents with headache, nausea. History of depression."
+48,25,M,depression,"shortness of breath, nausea","Patient presents with shortness of breath, nausea. History of depression."
+49,31,M,hypertension,"fatigue, nausea","Patient presents with fatigue, nausea. History of hypertension."
+50,53,M,COPD,"nausea, shortness of breath","Patient presents with nausea, shortness of breath. History of COPD."
+51,51,M,depression,"shortness of breath, fatigue, cough","Patient presents with shortness of breath, fatigue, cough. History of depression."
+52,82,M,asthma,shortness of breath,Patient presents with shortness of breath. History of asthma.
+53,59,F,COPD,"chest pain, shortness of breath","Patient presents with chest pain, shortness of breath. History of COPD."
+54,80,M,depression,"nausea, chest pain, shortness of breath","Patient presents with nausea, chest pain, shortness of breath. History of depression."
+55,84,F,depression,"chest pain, headache, cough","Patient presents with chest pain, headache, cough. History of depression."
+56,37,M,hypertension,"nausea, fatigue, shortness of breath","Patient presents with nausea, fatigue, shortness of breath. History of hypertension."
+57,28,F,asthma,"chest pain, fatigue, shortness of breath","Patient presents with chest pain, fatigue, shortness of breath. History of asthma."
+58,19,M,depression,"chest pain, headache","Patient presents with chest pain, headache. History of depression."
+59,44,F,heart failure,nausea,Patient presents with nausea. History of heart failure.
+60,32,M,asthma,"chest pain, nausea","Patient presents with chest pain, nausea. History of asthma."
+61,68,M,COPD,headache,Patient presents with headache. History of COPD.
+62,81,F,heart failure,"cough, headache, fatigue","Patient presents with cough, headache, fatigue. History of heart failure."
+63,84,M,diabetes,nausea,Patient presents with nausea. History of diabetes.
+64,85,M,asthma,"chest pain, fatigue, cough","Patient presents with chest pain, fatigue, cough. History of asthma."
+65,54,M,hypertension,"fatigue, chest pain, cough","Patient presents with fatigue, chest pain, cough. History of hypertension."
+66,88,F,hypertension,"headache, fatigue, cough","Patient presents with headache, fatigue, cough. History of hypertension."
+67,49,M,hypertension,"shortness of breath, nausea","Patient presents with shortness of breath, nausea. History of hypertension."
+68,47,M,heart failure,fatigue,Patient presents with fatigue. History of heart failure.
+69,38,F,depression,shortness of breath,Patient presents with shortness of breath. History of depression.
+70,77,F,hypertension,cough,Patient presents with cough. History of hypertension.
+71,37,M,hypertension,chest pain,Patient presents with chest pain. History of hypertension.
+72,67,F,asthma,chest pain,Patient presents with chest pain. History of asthma.
+73,52,M,depression,fatigue,Patient presents with fatigue. History of depression.
+74,28,F,hypertension,"chest pain, nausea","Patient presents with chest pain, nausea. History of hypertension."
+75,80,F,depression,"shortness of breath, headache, nausea","Patient presents with shortness of breath, headache, nausea. History of depression."
+76,49,M,diabetes,nausea,Patient presents with nausea. History of diabetes.
+77,24,F,depression,nausea,Patient presents with nausea. History of depression.
+78,49,M,hypertension,"shortness of breath, chest pain","Patient presents with shortness of breath, chest pain. History of hypertension."
+79,19,F,depression,headache,Patient presents with headache. History of depression.
+80,64,M,depression,nausea,Patient presents with nausea. History of depression.
+81,76,F,depression,nausea,Patient presents with nausea. History of depression.
+82,85,M,heart failure,"shortness of breath, fatigue","Patient presents with shortness of breath, fatigue. History of heart failure."
+83,63,M,COPD,"nausea, headache, fatigue","Patient presents with nausea, headache, fatigue. History of COPD."
+84,42,M,asthma,"fatigue, cough","Patient presents with fatigue, cough. History of asthma."
+85,86,M,hypertension,"fatigue, headache","Patient presents with fatigue, headache. History of hypertension."
+86,24,F,heart failure,"cough, headache","Patient presents with cough, headache. History of heart failure."
+87,84,F,heart failure,"cough, nausea","Patient presents with cough, nausea. History of heart failure."
+88,57,M,depression,"fatigue, shortness of breath, headache","Patient presents with fatigue, shortness of breath, headache. History of depression."
+89,62,M,asthma,"headache, cough","Patient presents with headache, cough. History of asthma."
+90,58,M,COPD,"fatigue, headache","Patient presents with fatigue, headache. History of COPD."
+91,37,F,hypertension,"headache, fatigue, cough","Patient presents with headache, fatigue, cough. History of hypertension."
+92,90,M,hypertension,"nausea, fatigue","Patient presents with nausea, fatigue. History of hypertension."
+93,20,F,depression,"cough, nausea","Patient presents with cough, nausea. History of depression."
+94,36,M,diabetes,nausea,Patient presents with nausea. History of diabetes.
+95,87,F,asthma,"headache, shortness of breath, chest pain","Patient presents with headache, shortness of breath, chest pain. History of asthma."
+96,19,M,COPD,"chest pain, fatigue, nausea","Patient presents with chest pain, fatigue, nausea. History of COPD."
+97,67,F,diabetes,"chest pain, cough","Patient presents with chest pain, cough. History of diabetes."
+98,28,F,asthma,"shortness of breath, nausea, chest pain","Patient presents with shortness of breath, nausea, chest pain. History of asthma."
+99,86,F,hypertension,fatigue,Patient presents with fatigue. History of hypertension.
+100,75,M,hypertension,"headache, shortness of breath, cough","Patient presents with headache, shortness of breath, cough. History of hypertension."
