@@ -194,6 +194,6 @@ flowchart TD
 	G --> H(PEFT/SFT Finetuning)
 	H --> I(Model Deployment)
 ```
-```
+
 
 This diagram summarizes the modular workflow and feature integration in the advanced notebook, from raw clinical text to model deployment and cloud integration.
