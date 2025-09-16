@@ -75,7 +75,22 @@ This project is designed to simulate a real-world healthcare AI research environ
 ├── notebooks/          # Jupyter notebooks for exploration, modeling, and reporting
 │   ├── advanced_genai_features_demo.ipynb  # Advanced GenAI/NLP demo notebook
 │   ├── clinical_nlp_agents_demo.ipynb      # Modular agentic architecture demo
-│   └── clinical_nlp_demo.ipynb             # Classic clinical NLP workflow demo
+│   ├── clinical_nlp_demo.ipynb             # Classic clinical NLP workflow demo
+│   └── clinical_chatbot_demo.py            # Clinical Q&A chatbot demo (Hugging Face QA)
+## 🤖 Clinical Q&A Chatbot Demo
+
+The notebook/script `notebooks/clinical_chatbot_demo.py` demonstrates a simple clinical question-answering chatbot using Hugging Face's question-answering pipeline (e.g., `deepset/roberta-base-squad2`).
+
+**Features:**
+- Answers clinical questions based on a provided medical context (e.g., symptoms, diseases, treatments)
+- Uses open-source models for local, privacy-preserving Q&A
+- Easily extensible with custom medical FAQs or context documents
+
+**Example:**
+```
+Ask a clinical question: What are the symptoms of diabetes?
+Agent: increased thirst, frequent urination, fatigue, and blurred vision
+```
 ├── src/                # Python source modules
 │   ├── etl.py          # Data loading and cleaning utilities
 │   ├── nlp.py          # NLP functions (NER, de-identification)
