@@ -56,6 +56,24 @@ flowchart TD
 - Generate client-ready reports
 
 ## Advanced NLP Features
+
+## Large Language Model (LLM) Usage: Bio_ClinicalBERT
+
+This project leverages Bio_ClinicalBERT, a domain-specific large language model (LLM) based on BERT and pre-trained on clinical and biomedical text. Bio_ClinicalBERT is used for advanced Named Entity Recognition (NER) to extract disease and symptom entities from clinical notes with high accuracy.
+
+**How Bio_ClinicalBERT is used:**
+- Loaded via Hugging Face Transformers in the notebook and code modules
+- Used for direct inference (entity extraction) on clinical notes
+- Optionally fine-tuned with custom labeled data for specialized NER tasks
+- Compared with spaCy and rule-based extraction for benchmarking
+
+**Why Bio_ClinicalBERT?**
+- Recognizes medical terminology and entities better than general-purpose models
+- Widely adopted in healthcare AI research and production
+
+See the notebook for code examples of both inference and (optional) fine-tuning with Bio_ClinicalBERT.
+
+## Advanced NLP Features
 - Fine-tune and evaluate transformer-based NER models on clinical notes (`run_advanced_ner`)
 - Use rule-based logic for cohort selection (e.g., T2D phenotyping, `assess_t2d_cohort`)
 - De-identify notes before NLP and modeling (`deidentify_text`)
