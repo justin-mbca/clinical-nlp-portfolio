@@ -27,7 +27,9 @@ This project is designed to simulate a real-world healthcare AI research environ
 .
 ├── data/               # Sample synthetic clinical notes and EHR data (de-identified)
 ├── notebooks/          # Jupyter notebooks for exploration, modeling, and reporting
-│   └── advanced_genai_features_demo.ipynb  # Main demo notebook
+│   ├── advanced_genai_features_demo.ipynb  # Advanced GenAI/NLP demo notebook
+│   ├── clinical_nlp_agents_demo.ipynb      # Modular agentic architecture demo
+│   └── clinical_nlp_demo.ipynb             # Classic clinical NLP workflow demo
 ├── src/                # Python source modules
 │   ├── etl.py          # Data loading and cleaning utilities
 │   ├── nlp.py          # NLP functions (NER, de-identification)
@@ -123,34 +125,47 @@ flowchart TD
     *   The main demonstration is in `notebooks/advanced_genai_features_demo.ipynb`.
     *   Run ETL and modeling scripts from the `src/` directory.
 
-## 📓 Advanced GenAI Features Demo Notebook
 
-The flagship notebook (`notebooks/advanced_genai_features_demo.ipynb`) is a recruiter-ready deep dive into modern clinical AI, showcasing:
+## 📓 Notebooks Overview
 
-**Section Overview:**
-1.  **Entity Extraction & Classification:** Advanced NER with Hugging Face's Bio_ClinicalBERT.
-2.  **RAG Pipeline:** A complete Retrieval-Augmented Generation system for clinical question answering.
-3.  **VectorDB Integration:** Semantic search implementations with Annoy and FAISS.
-4.  **Prompt Engineering & Finetuning:** Strategies for optimizing LLM interactions and conceptual fine-tuning workflows.
-5.  **Bias Detection & Safety:** Implementing model guardrails and fairness checks.
-6.  **Cloud Integration (AWS):** Code examples for model and data storage in S3.
-7.  **PEFT/SFT Finetuning:** Setup for parameter-efficient fine-tuning using Hugging Face PEFT and LoRA.
-
-The notebook workflow is modular, allowing sections to be understood and run independently.
+### 1. advanced_genai_features_demo.ipynb
+Recruiter-ready deep dive into advanced GenAI and clinical NLP workflows:
+* Entity extraction & classification with Bio_ClinicalBERT
+* Retrieval-Augmented Generation (RAG) pipeline
+* VectorDB integration (Annoy, FAISS)
+* Prompt engineering & finetuning
+* Bias detection & safety
+* Cloud integration (AWS S3)
+* PEFT/SFT finetuning (LoRA, Hugging Face PEFT)
 
 ```mermaid
 flowchart TD
-    A[Start: Clinical Text] --> B[Entity Extraction Bio_ClinicalBERT]
-    A --> C[Retrieval-Augmented Generation RAG]
-    A --> D[Vector DB Search Annoy/FAISS]
-    B --> E[Prompt Engineering]
+    A(Start: Clinical Text) --> B(Entity Extraction: Bio_ClinicalBERT)
+    A --> C(Retrieval-Augmented Generation: RAG)
+    A --> D(Vector DB Search: Annoy/FAISS)
+    B --> E(Prompt Engineering)
     C --> E
     D --> E
-    E --> F[Bias Detection and Safety]
-    F --> G[Cloud Integration AWS S3]
-    G --> H[PEFT SFT Finetuning]
-    H --> I[Model Deployment]
+    E --> F(Bias Detection & Safety)
+    F --> G(Cloud Integration: AWS S3)
+    G --> H(PEFT/SFT Finetuning)
+    H --> I(Model Deployment)
 ```
+
+### 2. clinical_nlp_agents_demo.ipynb
+Modular agentic architecture demo:
+* Each agent (Claims, Eligibility, De-identification, Cohort Phenotyping, Coding, Retrieval, Summary, Risk Prediction, Care Coordination) is implemented in a dedicated section
+* Demonstrates agent-to-agent protocols (A2A), Model Context Protocol (MCP), RAG, FHIR/ICD standards, and vector DB integration
+* Includes markdown explanations, code, and orchestration for real-world clinical operations
+
+### 3. clinical_nlp_demo.ipynb
+Classic clinical NLP workflow demo:
+* End-to-end workflow for synthetic clinical data
+* ETL: Load and clean data
+* NLP: Extract disease phenotypes and symptoms
+* Analysis: Visualize and summarize results
+* Predictive modeling: Disease risk classification (diabetes, hypertension, asthma, etc.)
+* Feature engineering, model evaluation, and interpretation
 
 ## 🔮 Further Development
 
