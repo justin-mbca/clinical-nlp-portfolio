@@ -19,6 +19,13 @@ flowchart TD
 	E --> F[Predictive Modeling - Logistic Regression]
 	F --> G[Model Evaluation & Visualization]
 	G --> H[Interpretation & Reporting]
+	F --> I{Disease Examples}
+	I --> J[Diabetes]
+	I --> K[Hypertension]
+	I --> L[Asthma]
+	I --> M[Heart failure]
+	I --> N[COPD]
+	I --> O[Depression]
 ```
 
 ## Structure
