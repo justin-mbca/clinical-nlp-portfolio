@@ -182,7 +182,6 @@ Each section includes code, workflow explanation, and practical tips for product
 ### Mermaid Diagram: Advanced GenAI Features Workflow
 
 ```mermaid
-```mermaid
 flowchart TD
 	A(Start: Clinical Text) --> B(Entity Extraction: Bio_ClinicalBERT)
 	A --> C(Retrieval-Augmented Generation: RAG)
