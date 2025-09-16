@@ -31,6 +31,7 @@ graph TD
 	A2A --> FHIR[Healthcare Data Standards]
 	A2A --> VectorDB[VectorDB Integration]
 	MCP --> RAG
+
 	MCP --> VectorDB
 	RAG --> FHIR
 	RAG --> VectorDB
