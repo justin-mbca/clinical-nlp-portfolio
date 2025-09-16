@@ -87,6 +87,9 @@ The notebook/script `notebooks/clinical_chatbot_demo.py` demonstrates a simple c
 
 This demo leverages LangChain for agentic workflow orchestration and uses a Hugging Face medical QA model to answer clinical questions based on provided context. The chatbot is designed for privacy-preserving, local inference and can be extended with custom medical FAQs or documents.
 
+**LangChain Extension:**
+The chatbot can be further enhanced using LangChain to support multi-step reasoning, retrieval-augmented generation (RAG), and integration with external data sources or medical knowledge bases. This enables more advanced agentic workflows, chaining of tools, and richer clinical Q&A experiences.
+
 **About the Model:**
 The model used is [`deepset/roberta-base-squad2`](https://huggingface.co/deepset/roberta-base-squad2), a RoBERTa-base architecture fine-tuned on the SQuAD2.0 dataset for extractive question answering. While not specifically trained on medical data, it is widely used for QA tasks and can answer clinical questions when provided with relevant medical context. For more domain-specific results, consider using models like Bio_ClinicalBERT or other medical QA models from Hugging Face.
 
