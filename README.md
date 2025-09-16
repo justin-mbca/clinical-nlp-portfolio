@@ -7,6 +7,8 @@ A comprehensive portfolio project demonstrating advanced expertise in Clinical N
 *   **Agentic Systems:** Designing multi-agent architectures with standardized protocols (A2A, MCP) for automated workflows.
 *   **End-to-End ML Pipeline:** Expertise in data ETL, feature engineering, predictive modeling (e.g., logistic regression for disease risk), and evaluation.
 *   **Healthcare Compliance:** Built-in de-identification and adherence to healthcare data standards (FHIR, ICD).
+*   **LangChain Integration:** Modular agentic workflows and orchestration using LangChain for clinical NLP and Q&A.
+*   **Clinical Q&A Chatbot:** Demonstrates a chatbot using Hugging Face medical QA models for answering clinical questions.
 
 ## 🧠 Conceptual Overview: A Guided Tour
 
@@ -66,6 +68,8 @@ This project is designed to simulate a real-world healthcare AI research environ
 *   **Predictive Modeling:** Logistic regression models for predicting patient disease risk (e.g., Diabetes, Hypertension).
 *   **Healthcare Interoperability:** Parsers and utilities for FHIR and ICD standards.
 *   **Cloud & MLOps Ready:** Examples and patterns for deploying models to AWS and implementing MLOps practices.
+*   **LangChain Workflows:** Modular agentic orchestration and prompt engineering using LangChain.
+*   **Clinical Q&A Chatbot:** Local chatbot demo using Hugging Face's medical question-answering models (e.g., roberta-base-squad2).
 
 ## 📁 Project Structure
 
@@ -81,10 +85,12 @@ This project is designed to simulate a real-world healthcare AI research environ
 
 The notebook/script `notebooks/clinical_chatbot_demo.py` demonstrates a simple clinical question-answering chatbot using Hugging Face's question-answering pipeline (e.g., `deepset/roberta-base-squad2`).
 
+This demo leverages LangChain for agentic workflow orchestration and uses a Hugging Face medical QA model to answer clinical questions based on provided context. The chatbot is designed for privacy-preserving, local inference and can be extended with custom medical FAQs or documents.
+
+**About the Model:**
+The model used is [`deepset/roberta-base-squad2`](https://huggingface.co/deepset/roberta-base-squad2), a RoBERTa-base architecture fine-tuned on the SQuAD2.0 dataset for extractive question answering. While not specifically trained on medical data, it is widely used for QA tasks and can answer clinical questions when provided with relevant medical context. For more domain-specific results, consider using models like Bio_ClinicalBERT or other medical QA models from Hugging Face.
+
 **Features:**
-- Answers clinical questions based on a provided medical context (e.g., symptoms, diseases, treatments)
-- Uses open-source models for local, privacy-preserving Q&A
-- Easily extensible with custom medical FAQs or context documents
 
 **Example:**
 ```
@@ -198,6 +204,7 @@ Recruiter-ready deep dive into advanced GenAI and clinical NLP workflows:
 * Bias detection & safety
 * Cloud integration (AWS S3)
 * PEFT/SFT finetuning (LoRA, Hugging Face PEFT)
+* LangChain agentic workflows and prompt engineering
 
 ```mermaid
 flowchart TD
@@ -218,6 +225,7 @@ Modular agentic architecture demo:
 * Each agent (Claims, Eligibility, De-identification, Cohort Phenotyping, Coding, Retrieval, Summary, Risk Prediction, Care Coordination) is implemented in a dedicated section
 * Demonstrates agent-to-agent protocols (A2A), Model Context Protocol (MCP), RAG, FHIR/ICD standards, and vector DB integration
 * Includes markdown explanations, code, and orchestration for real-world clinical operations
+* LangChain-powered orchestration and agentic workflow examples
 
 ### 3. clinical_nlp_demo.ipynb
 Classic clinical NLP workflow demo:
