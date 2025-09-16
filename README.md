@@ -4,6 +4,12 @@ A portfolio project demonstrating expertise in Natural Language Processing (NLP)
 
 ## Project Overview
 This repository showcases:
+- End-to-end clinical NLP workflow on synthetic EHR data
+- Advanced Named Entity Recognition (NER) using transformer-based models (Bio_ClinicalBERT)
+- Rule-based cohort phenotyping for disease risk
+- De-identification of clinical notes for privacy
+- Feature engineering and predictive modeling
+- Interactive Jupyter notebook workflow for demonstration
 
 ## Workflow Diagram
 
@@ -12,20 +18,24 @@ Below is a visual summary of the end-to-end workflow using Mermaid:
 ```mermaid
 flowchart TD
 	A[Start: Synthetic Clinical Data] --> B[ETL: Load & Clean Data]
-	B --> C[NLP: Rule-based Extraction]
-	B --> D[NLP: spaCy NER]
-	C --> E[Feature Engineering]
-	D --> E
-	E --> F[Predictive Modeling - Logistic Regression]
-	F --> G[Model Evaluation & Visualization]
-	G --> H[Interpretation & Reporting]
-	F --> I{Disease Examples}
-	I --> J[Diabetes]
-	I --> K[Hypertension]
-	I --> L[Asthma]
-	I --> M[Heart failure]
-	I --> N[COPD]
-	I --> O[Depression]
+	B --> C[De-identification]
+	C --> D[Transformer-based NER (Bio_ClinicalBERT)]
+	C --> E[spaCy NER]
+	C --> F[Rule-based Extraction]
+	D --> G[Feature Engineering]
+	E --> G
+	F --> G
+	G --> H[Rule-based Cohort Builder]
+	G --> I[Predictive Modeling - Logistic Regression]
+	I --> J[Model Evaluation & Visualization]
+	J --> K[Interpretation & Reporting]
+	I --> L{Disease Examples}
+	L --> M[Diabetes]
+	L --> N[Hypertension]
+	L --> O[Asthma]
+	L --> P[Heart failure]
+	L --> Q[COPD]
+	L --> R[Depression]
 ```
 
 ## Structure
@@ -44,6 +54,13 @@ flowchart TD
 - Extract disease phenotypes from clinical notes
 - Predict patient risk for conditions
 - Generate client-ready reports
+
+## Advanced NLP Features
+- Fine-tune and evaluate transformer-based NER models on clinical notes (`run_advanced_ner`)
+- Use rule-based logic for cohort selection (e.g., T2D phenotyping, `assess_t2d_cohort`)
+- De-identify notes before NLP and modeling (`deidentify_text`)
+- Compare transformer-based NER with spaCy and rule-based extraction
+- Visualize and interpret model outputs in the notebook
 
 ## Compliance
 This project simulates privacy and IRB compliance for demonstration purposes. No real patient data is used.
@@ -67,4 +84,4 @@ This pipeline can be easily extended to predict risk for other diseases. Current
 See the notebook for code examples and guidance.
 
 ## Contact
-For more information, reach out to Justin. 
+For more information, reach out to Justin.
