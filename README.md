@@ -183,16 +183,18 @@ Each section includes code, workflow explanation, and practical tips for product
 
 ```mermaid
 flowchart TD
-	A[Start: Clinical Text] --> B[Entity Extraction (Bio_ClinicalBERT)]
-	A --> C[Retrieval-Augmented Generation (RAG)]
-	A --> D[Vector DB Search (Annoy/FAISS)]
+	A[Start: Clinical Text] --> B[Entity Extraction Bio_ClinicalBERT]
+	A --> C[Retrieval-Augmented Generation RAG]
+	A --> D[Vector DB Search Annoy/FAISS]
 	B --> E[Prompt Engineering]
 	C --> E
 	D --> E
-	E --> F[Bias Detection & Safety]
-	F --> G[Cloud Integration (AWS S3)]
-	G --> H[PEFT/SFT Finetuning]
+	E --> F[Bias Detection and Safety]
+	F --> G[Cloud Integration AWS S3]
+	G --> H[PEFT SFT Finetuning]
 	H --> I[Model Deployment]
 ```
 
+
 This diagram summarizes the modular workflow and feature integration in the advanced notebook, from raw clinical text to model deployment and cloud integration.
+
