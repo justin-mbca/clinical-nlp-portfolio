@@ -1,200 +1,170 @@
-# Clinical NLP Portfolio
+# Clinical & GenAI NLP Portfolio
 
-A portfolio project demonstrating expertise in Natural Language Processing (NLP), clinical data analysis, ETL, predictive modeling, and client-facing reporting for healthcare research.
+A comprehensive portfolio project demonstrating advanced expertise in Clinical Natural Language Processing (NLP), Generative AI, and data science. This repository showcases the complete lifecycle of a healthcare AI project, from ETL and de-identification of synthetic clinical data to predictive modeling, agentic architecture design, and client-ready reporting.
 
-## Project Overview
-This repository showcases:
+## 🚀 Value Proposition
 
-## Agentic Architectures & Protocols Notebook
+This project is designed to simulate a real-world healthcare AI research environment, highlighting key skills:
+*   **Advanced NLP & LLMs:** Fine-tuning and deploying domain-specific models like Bio_ClinicalBERT for clinical entity recognition.
+*   **Generative AI:** Implementing Retrieval-Augmented Generation (RAG), vector databases, and prompt engineering for clinical Q&A.
+*   **Agentic Systems:** Designing multi-agent architectures with standardized protocols (A2A, MCP) for automated workflows.
+*   **End-to-End ML Pipeline:** Expertise in data ETL, feature engineering, predictive modeling (e.g., logistic regression for disease risk), and evaluation.
+*   **Healthcare Compliance:** Built-in de-identification and adherence to healthcare data standards (FHIR, ICD).
 
-## NLP Agents Architecture Overview
+## ✨ Features
 
-- **Agent-to-Agent Protocols (A2A):** Agents communicate and collaborate using standardized message-passing protocols, allowing for distributed decision-making and workflow automation.
-- **Model Context Protocol (MCP):** Provides persistent, context-aware memory for agents, enabling them to track interactions, decisions, and patient-specific information over time.
-- **Retrieval-Augmented Generation (RAG):** Combines document retrieval with large language model (LLM) generation to answer complex clinical questions using both structured and unstructured data.
-- **Healthcare Data Standards:** Integrates FHIR and ICD parsers to ensure interoperability and compliance with healthcare data standards.
-- **VectorDB Integration:** Implements vector-based memory for agents, supporting semantic search, similarity matching, and efficient retrieval of clinical information.
+*   **Transformer-Based NER:** Extraction of medical concepts using Bio_ClinicalBERT from Hugging Face.
+*   **Multi-Agent Architecture:** Demonstrates agent-to-agent (A2A) communication and context management with Model Context Protocol (MCP).
+*   **Retrieval-Augmented Generation (RAG):** A working RAG pipeline for answering complex clinical questions.
+*   **Vector Database Integration:** Semantic search and efficient memory retrieval using Annoy and FAISS/Chroma.
+*   **Predictive Modeling:** Logistic regression models for predicting patient disease risk (e.g., Diabetes, Hypertension).
+*   **Healthcare Interoperability:** Parsers and utilities for FHIR and ICD standards.
+*   **Cloud & MLOps Ready:** Examples and patterns for deploying models to AWS and implementing MLOps practices.
 
-### Architectural Principles
+## 📁 Project Structure
 
-- **Modularity:** Each component is implemented as a separate module, making the architecture extensible and maintainable.
-- **Agentic Intelligence:** Agents act autonomously, collaborate, and share context, supporting complex multi-agent workflows.
-- **Interoperability:** Built-in support for healthcare standards ensures compatibility with real-world clinical systems.
-- **Scalability:** The architecture supports integration with cloud-native and MLOps workflows for production deployment.
+```
+.
+├── data/               # Sample synthetic clinical notes and EHR data (de-identified)
+├── notebooks/          # Jupyter notebooks for exploration, modeling, and reporting
+│   └── advanced_genai_features_demo.ipynb  # Main demo notebook
+├── src/                # Python source modules
+│   ├── etl.py          # Data loading and cleaning utilities
+│   ├── nlp.py          # NLP functions (NER, de-identification)
+│   ├── modeling.py     # Predictive modeling routines
+│   └── utils.py        # Helper functions
+├── reports/            # Generated client deliverables and reports
+└── requirements.txt    # Python dependencies
+```
 
-### Mermaid Diagram: NLP Agents Architecture
+## 🏗️ Agentic Architectures & Protocols
 
+The project implements a forward-looking multi-agent architecture for clinical decision support.
+
+### Architectural Overview
 ```mermaid
 graph TD
-	A2A[Agent-to-Agent Protocols] --> MCP[Model Context Protocol]
-	A2A --> RAG[Retrieval-Augmented Generation]
-	A2A --> FHIR[Healthcare Data Standards]
-	A2A --> VectorDB[VectorDB Integration]
-	MCP --> RAG
-
-	MCP --> VectorDB
-	RAG --> FHIR
-	RAG --> VectorDB
-	FHIR --> VectorDB
-	subgraph Agents
-		A2A
-		MCP
-		RAG
-		FHIR
-		VectorDB
-	end
+    A2A[Agent-to-Agent Protocols] --> MCP[Model Context Protocol]
+    A2A --> RAG[Retrieval-Augmented Generation]
+    A2A --> FHIR[Healthcare Data Standards]
+    A2A --> VectorDB[VectorDB Integration]
+    MCP --> RAG
+    MCP --> VectorDB
+    RAG --> FHIR
+    RAG --> VectorDB
+    FHIR --> VectorDB
+    subgraph Agents
+        A2A
+        MCP
+        RAG
+        FHIR
+        VectorDB
+    end
 ```
-### Agentic Architecture Overview (Mermaid)
+
+### Example Agent Workflow
+```mermaid
+flowchart TD
+    A[ClaimsAgent] -- A2A Protocol --> B[EligibilityAgent]
+    B -- A2A Protocol --> C[ProviderMatchAgent]
+    A -- MCP Context --> D[Model Context Memory]
+    B -- MCP Context --> D
+    C -- MCP Context --> D
+    A -- RAG Query --> E[Document Retriever]
+    E -- Retrieved Docs --> F[LLM Generator]
+    F -- Answer --> A
+    D -- VectorDB --> G[Vector Memory]
+    G -- Memory Retrieval --> A
+    G -- Memory Retrieval --> B
+```
+
+## 🔬 Technical Workflow
+
+The end-to-end data science and NLP pipeline is visualized below:
 
 ```mermaid
 flowchart TD
-	A[ClaimsAgent] -- A2A Protocol --> B[EligibilityAgent]
-	B -- A2A Protocol --> C[ProviderMatchAgent]
-	A -- MCP Context --> D[Model Context Memory]
-	B -- MCP Context --> D
-	C -- MCP Context --> D
-	A -- RAG Query --> E[Document Retriever]
-	E -- Retrieved Docs --> F[LLM Generator]
-	F -- Answer --> A
-	D -- VectorDB --> G[Vector Memory]
-	G -- Memory Retrieval --> A
-	G -- Memory Retrieval --> B
+    A[Start: Synthetic Clinical Data] --> B[ETL: Load & Clean Data]
+    B --> C[De-identification]
+    C --> D[Transformer-based NER: Bio_ClinicalBERT]
+    C --> E[spaCy NER]
+    C --> F[Rule-based Extraction]
+    D --> G[Feature Engineering]
+    E --> G
+    F --> G
+    G --> H[Rule-based Cohort Builder]
+    G --> I[Predictive Modeling - Logistic Regression]
+    I --> J[Model Evaluation & Visualization]
+    J --> K[Interpretation & Reporting]
+    I --> L{Disease Examples}
+    L --> M[Diabetes]
+    L --> N[Hypertension]
+    L --> O[Asthma]
+    L --> P[Heart failure]
+    L --> Q[COPD]
+    L --> R[Depression]
 ```
 
-## Workflow Diagram
+## 🛠️ Installation & Usage
 
-Below is a visual summary of the end-to-end workflow using Mermaid:
+1.  **Clone the repository:**
+    ```bash
+    git clone <your-repo-url>
+    cd clinical-nlp-portfolio
+    ```
 
-```mermaid
-flowchart TD
-	A[Start: Synthetic Clinical Data] --> B[ETL: Load & Clean Data]
-	B --> C[De-identification]
-	C --> D[Transformer-based NER: Bio_ClinicalBERT]
-	C --> E[spaCy NER]
-	C --> F[Rule-based Extraction]
-	D --> G[Feature Engineering]
-	E --> G
-	F --> G
-	G --> H[Rule-based Cohort Builder]
-	G --> I[Predictive Modeling - Logistic Regression]
-	I --> J[Model Evaluation & Visualization]
-	J --> K[Interpretation & Reporting]
-	I --> L{Disease Examples}
-	L --> M[Diabetes]
-	L --> N[Hypertension]
-	L --> O[Asthma]
-	L --> P[Heart failure]
-	L --> Q[COPD]
-	L --> R[Depression]
-```
+2.  **Install dependencies:**
+    It is recommended to use a virtual environment (`venv` or `conda`).
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-## Structure
-- `data/` – Sample clinical notes and EHR data (de-identified)
-- `notebooks/` – Jupyter notebooks for exploration, modeling, and reporting
-- `src/` – Python modules for ETL, NLP, modeling, and utilities
-- `reports/` – Generated reports and client deliverables
+3.  **Explore the project:**
+    *   The main demonstration is in `notebooks/advanced_genai_features_demo.ipynb`.
+    *   Run ETL and modeling scripts from the `src/` directory.
 
-## Getting Started
-1. Clone the repository
-2. Install dependencies: `pip install -r requirements.txt`
-3. Explore notebooks in `notebooks/`
-4. Run ETL and modeling scripts in `src/`
+## 📓 Advanced GenAI Features Demo Notebook
 
-## Example Use Cases
-- Extract disease phenotypes from clinical notes
-- Predict patient risk for conditions
-- Generate client-ready reports
-
-## Advanced NLP Features
-
-## Large Language Model (LLM) Usage: Bio_ClinicalBERT
-
-This project leverages Bio_ClinicalBERT, a domain-specific large language model (LLM) based on BERT and pre-trained on clinical and biomedical text. Bio_ClinicalBERT is used for advanced Named Entity Recognition (NER) to extract disease and symptom entities from clinical notes with high accuracy.
-
-**How Bio_ClinicalBERT is used:**
-- Loaded via Hugging Face Transformers in the notebook and code modules
-- Used for direct inference (entity extraction) on clinical notes
-- Optionally fine-tuned with custom labeled data for specialized NER tasks
-- Compared with spaCy and rule-based extraction for benchmarking
-
-**Why Bio_ClinicalBERT?**
-- Recognizes medical terminology and entities better than general-purpose models
-- Widely adopted in healthcare AI research and production
-
-See the notebook for code examples of both inference and (optional) fine-tuning with Bio_ClinicalBERT.
-
-## Advanced NLP Features
-- Fine-tune and evaluate transformer-based NER models on clinical notes (`run_advanced_ner`)
-- Use rule-based logic for cohort selection (e.g., T2D phenotyping, `assess_t2d_cohort`)
-- De-identify notes before NLP and modeling (`deidentify_text`)
-- Compare transformer-based NER with spaCy and rule-based extraction
-- Visualize and interpret model outputs in the notebook
-
-## Compliance
-This project simulates privacy and IRB compliance for demonstration purposes. No real patient data is used.
-
-## Further Development
-
-## Expanding Disease Risk Prediction
-
-This pipeline can be easily extended to predict risk for other diseases. Currently, diabetes, hypertension, and asthma are included. To add more:
-
-- Update the target variable to the disease of interest (e.g., heart failure, COPD, depression)
-- Use the same feature engineering and modeling steps
-- For multi-class prediction, use multiclass classifiers (e.g., multinomial logistic regression, random forest)
-
-**Examples of diseases to expand:**
-- Heart failure
-- COPD
-- Depression
-- Any disease present in the dataset
-
-See the notebook for code examples and guidance.
-
-## Contact
-For more information, reach out to Justin.
-[See below for advanced notebook documentation.]
-
-## Advanced GenAI Features Demo Notebook
-
-The notebook `notebooks/advanced_genai_features_demo.ipynb` demonstrates advanced GenAI, NLP, and LLM features for recruiter-ready healthcare AI/data science portfolios. It is designed to showcase practical, modular workflows and agentic architectures for clinical NLP and GenAI applications.
-
-**Features Demonstrated:**
-- Entity extraction and classification with BERT/Bio_ClinicalBERT (Hugging Face Transformers)
-- Retrieval-Augmented Generation (RAG) pipeline
-- Vector database integration (Annoy, FAISS/Chroma)
-- Prompt engineering and finetuning
-- Bias detection, model guardrails, and safety checks
-- Cloud integration (AWS, S3, cloud ML workflows)
-- PEFT/SFT advanced finetuning (Hugging Face PEFT)
+The flagship notebook (`notebooks/advanced_genai_features_demo.ipynb`) is a recruiter-ready deep dive into modern clinical AI, showcasing:
 
 **Section Overview:**
-1. **Entity Extraction & Classification:** Use BERT/Bio_ClinicalBERT for extracting and classifying clinical entities from text.
-2. **Retrieval-Augmented Generation (RAG):** Demonstrate a simple RAG pipeline for clinical QA using custom retrievers and generators.
-3. **Vector Database Integration:** Show semantic search with Annoy (Python 3.13 compatible) and FAISS/Chroma alternatives.
-4. **Prompt Engineering & Finetuning:** Use fill-mask pipelines and conceptual finetuning workflows.
-5. **Bias Detection & Safety:** Implement bias checks and model guardrails using scikit-learn.
-6. **Cloud Integration:** Example code for uploading models/data to AWS S3 and notes on cloud ML workflows.
-7. **PEFT/SFT Finetuning:** Setup for parameter-efficient finetuning using Hugging Face PEFT and LoRA.
+1.  **Entity Extraction & Classification:** Advanced NER with Hugging Face's Bio_ClinicalBERT.
+2.  **RAG Pipeline:** A complete Retrieval-Augmented Generation system for clinical question answering.
+3.  **VectorDB Integration:** Semantic search implementations with Annoy and FAISS.
+4.  **Prompt Engineering & Finetuning:** Strategies for optimizing LLM interactions and conceptual fine-tuning workflows.
+5.  **Bias Detection & Safety:** Implementing model guardrails and fairness checks.
+6.  **Cloud Integration (AWS):** Code examples for model and data storage in S3.
+7.  **PEFT/SFT Finetuning:** Setup for parameter-efficient fine-tuning using Hugging Face PEFT and LoRA.
 
-Each section includes code, workflow explanation, and practical tips for production and portfolio use. The notebook is recruiter-ready and modular, suitable for demonstrating advanced skills in clinical NLP, GenAI, and healthcare AI.
-
-### Mermaid Diagram: Advanced GenAI Features Workflow
+The notebook workflow is modular, allowing sections to be understood and run independently.
 
 ```mermaid
 flowchart TD
-	A[Start: Clinical Text] --> B[Entity Extraction Bio_ClinicalBERT]
-	A --> C[Retrieval-Augmented Generation RAG]
-	A --> D[Vector DB Search Annoy/FAISS]
-	B --> E[Prompt Engineering]
-	C --> E
-	D --> E
-	E --> F[Bias Detection and Safety]
-	F --> G[Cloud Integration AWS S3]
-	G --> H[PEFT SFT Finetuning]
-	H --> I[Model Deployment]
+    A[Start: Clinical Text] --> B[Entity Extraction Bio_ClinicalBERT]
+    A --> C[Retrieval-Augmented Generation RAG]
+    A --> D[Vector DB Search Annoy/FAISS]
+    B --> E[Prompt Engineering]
+    C --> E
+    D --> E
+    E --> F[Bias Detection and Safety]
+    F --> G[Cloud Integration AWS S3]
+    G --> H[PEFT SFT Finetuning]
+    H --> I[Model Deployment]
 ```
 
+## 🔮 Further Development
 
-This diagram summarizes the modular workflow and feature integration in the advanced notebook, from raw clinical text to model deployment and cloud integration.
+The pipeline is designed for extension:
+*   **New Disease Prediction:** Easily adapt the model to predict heart failure, COPD, depression, or any condition present in the data by modifying the target variable.
+*   **New Agents:** Implement additional agents for tasks like prior authorization or clinical trial matching using the established A2A protocol.
+*   **Real Data Integration:** The architecture supports plugging in real FHIR servers or EHR data streams.
 
+## ⚠️ Compliance Note
+
+**This project uses only synthetic, de-identified data.** It is designed to simulate privacy-aware development practices and IRB compliance for demonstration purposes. No real Protected Health Information (PHI) is used.
+
+## 📧 Contact
+
+For questions or more information, please reach out to **Justin**.
+
+---
