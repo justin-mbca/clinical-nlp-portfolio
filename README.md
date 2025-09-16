@@ -4,24 +4,53 @@ A portfolio project demonstrating expertise in Natural Language Processing (NLP)
 
 ## Project Overview
 This repository showcases:
-- End-to-end clinical NLP workflow on synthetic EHR data
-- Advanced Named Entity Recognition (NER) using transformer-based models (Bio_ClinicalBERT)
-- Rule-based cohort phenotyping for disease risk
-- De-identification of clinical notes for privacy
-- Feature engineering and predictive modeling
-- Interactive Jupyter notebook workflow for demonstration
 
 ## Agentic Architectures & Protocols Notebook
 
 The `clinical_nlp_agents_demo.ipynb` notebook demonstrates advanced agentic architectures and protocols for healthcare AI, including:
-- Agent-to-Agent (A2A) protocols for autonomous agent collaboration
-- Model Context Protocol (MCP) for persistent, context-aware agent memory
-- Retrieval-Augmented Generation (RAG) for dynamic knowledge retrieval and LLM-based answer generation
-- Parsing and handling healthcare data standards (FHIR, ICD)
-- VectorDB integration for agent memory and retrieval
 
 This notebook is designed to showcase expertise in building interoperable, context-aware, and self-improving agentic systems for healthcare operations.
 
+## NLP Agents Architecture Overview
+
+The `nlp_agents` architecture is designed to enable advanced, modular, and agentic workflows for clinical Natural Language Processing (NLP) in healthcare. It integrates multiple intelligent components, each responsible for a distinct aspect of the workflow, and enables seamless collaboration between them.
+
+### Key Components
+
+- **Agent-to-Agent Protocols (A2A):** Agents communicate and collaborate using standardized message-passing protocols, allowing for distributed decision-making and workflow automation.
+- **Model Context Protocol (MCP):** Provides persistent, context-aware memory for agents, enabling them to track interactions, decisions, and patient-specific information over time.
+- **Retrieval-Augmented Generation (RAG):** Combines document retrieval with large language model (LLM) generation to answer complex clinical questions using both structured and unstructured data.
+- **Healthcare Data Standards:** Integrates FHIR and ICD parsers to ensure interoperability and compliance with healthcare data standards.
+- **VectorDB Integration:** Implements vector-based memory for agents, supporting semantic search, similarity matching, and efficient retrieval of clinical information.
+
+### Architectural Principles
+
+- **Modularity:** Each component is implemented as a separate module, making the architecture extensible and maintainable.
+- **Agentic Intelligence:** Agents act autonomously, collaborate, and share context, supporting complex multi-agent workflows.
+- **Interoperability:** Built-in support for healthcare standards ensures compatibility with real-world clinical systems.
+- **Scalability:** The architecture supports integration with cloud-native and MLOps workflows for production deployment.
+
+### Mermaid Diagram: NLP Agents Architecture
+
+```mermaid
+graph TD
+	A2A[Agent-to-Agent Protocols] --> MCP[Model Context Protocol]
+	A2A --> RAG[Retrieval-Augmented Generation]
+	A2A --> FHIR[Healthcare Data Standards]
+	A2A --> VectorDB[VectorDB Integration]
+	MCP --> RAG
+	MCP --> VectorDB
+	RAG --> FHIR
+	RAG --> VectorDB
+	FHIR --> VectorDB
+	subgraph Agents
+		A2A
+		MCP
+		RAG
+		FHIR
+		VectorDB
+	end
+```
 ### Agentic Architecture Overview (Mermaid)
 
 ```mermaid
