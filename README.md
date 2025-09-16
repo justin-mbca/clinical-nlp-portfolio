@@ -19,7 +19,7 @@ Below is a visual summary of the end-to-end workflow using Mermaid:
 flowchart TD
 	A[Start: Synthetic Clinical Data] --> B[ETL: Load & Clean Data]
 	B --> C[De-identification]
-	C --> D[Transformer-based NER (Bio_ClinicalBERT)]
+	C --> D[Transformer-based NER: Bio_ClinicalBERT]
 	C --> E[spaCy NER]
 	C --> F[Rule-based Extraction]
 	D --> G[Feature Engineering]
