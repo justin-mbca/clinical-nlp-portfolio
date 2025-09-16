@@ -11,6 +11,34 @@ This repository showcases:
 - Feature engineering and predictive modeling
 - Interactive Jupyter notebook workflow for demonstration
 
+## Agentic Architectures & Protocols Notebook
+
+The `clinical_nlp_agents_demo.ipynb` notebook demonstrates advanced agentic architectures and protocols for healthcare AI, including:
+- Agent-to-Agent (A2A) protocols for autonomous agent collaboration
+- Model Context Protocol (MCP) for persistent, context-aware agent memory
+- Retrieval-Augmented Generation (RAG) for dynamic knowledge retrieval and LLM-based answer generation
+- Parsing and handling healthcare data standards (FHIR, ICD)
+- VectorDB integration for agent memory and retrieval
+
+This notebook is designed to showcase expertise in building interoperable, context-aware, and self-improving agentic systems for healthcare operations.
+
+### Agentic Architecture Overview (Mermaid)
+
+```mermaid
+flowchart TD
+	A[ClaimsAgent] -- A2A Protocol --> B[EligibilityAgent]
+	B -- A2A Protocol --> C[ProviderMatchAgent]
+	A -- MCP Context --> D[Model Context Memory]
+	B -- MCP Context --> D
+	C -- MCP Context --> D
+	A -- RAG Query --> E[Document Retriever]
+	E -- Retrieved Docs --> F[LLM Generator]
+	F -- Answer --> A
+	D -- VectorDB --> G[Vector Memory]
+	G -- Memory Retrieval --> A
+	G -- Memory Retrieval --> B
+```
+
 ## Workflow Diagram
 
 Below is a visual summary of the end-to-end workflow using Mermaid:
