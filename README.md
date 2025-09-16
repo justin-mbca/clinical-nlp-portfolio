@@ -7,15 +7,7 @@ This repository showcases:
 
 ## Agentic Architectures & Protocols Notebook
 
-The `clinical_nlp_agents_demo.ipynb` notebook demonstrates advanced agentic architectures and protocols for healthcare AI, including:
-
-This notebook is designed to showcase expertise in building interoperable, context-aware, and self-improving agentic systems for healthcare operations.
-
 ## NLP Agents Architecture Overview
-
-The `nlp_agents` architecture is designed to enable advanced, modular, and agentic workflows for clinical Natural Language Processing (NLP) in healthcare. It integrates multiple intelligent components, each responsible for a distinct aspect of the workflow, and enables seamless collaboration between them.
-
-### Key Components
 
 - **Agent-to-Agent Protocols (A2A):** Agents communicate and collaborate using standardized message-passing protocols, allowing for distributed decision-making and workflow automation.
 - **Model Context Protocol (MCP):** Provides persistent, context-aware memory for agents, enabling them to track interactions, decisions, and patient-specific information over time.
