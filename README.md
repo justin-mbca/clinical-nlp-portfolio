@@ -153,3 +153,46 @@ See the notebook for code examples and guidance.
 
 ## Contact
 For more information, reach out to Justin.
+[See below for advanced notebook documentation.]
+
+## Advanced GenAI Features Demo Notebook
+
+The notebook `notebooks/advanced_genai_features_demo.ipynb` demonstrates advanced GenAI, NLP, and LLM features for recruiter-ready healthcare AI/data science portfolios. It is designed to showcase practical, modular workflows and agentic architectures for clinical NLP and GenAI applications.
+
+**Features Demonstrated:**
+- Entity extraction and classification with BERT/Bio_ClinicalBERT (Hugging Face Transformers)
+- Retrieval-Augmented Generation (RAG) pipeline
+- Vector database integration (Annoy, FAISS/Chroma)
+- Prompt engineering and finetuning
+- Bias detection, model guardrails, and safety checks
+- Cloud integration (AWS, S3, cloud ML workflows)
+- PEFT/SFT advanced finetuning (Hugging Face PEFT)
+
+**Section Overview:**
+1. **Entity Extraction & Classification:** Use BERT/Bio_ClinicalBERT for extracting and classifying clinical entities from text.
+2. **Retrieval-Augmented Generation (RAG):** Demonstrate a simple RAG pipeline for clinical QA using custom retrievers and generators.
+3. **Vector Database Integration:** Show semantic search with Annoy (Python 3.13 compatible) and FAISS/Chroma alternatives.
+4. **Prompt Engineering & Finetuning:** Use fill-mask pipelines and conceptual finetuning workflows.
+5. **Bias Detection & Safety:** Implement bias checks and model guardrails using scikit-learn.
+6. **Cloud Integration:** Example code for uploading models/data to AWS S3 and notes on cloud ML workflows.
+7. **PEFT/SFT Finetuning:** Setup for parameter-efficient finetuning using Hugging Face PEFT and LoRA.
+
+Each section includes code, workflow explanation, and practical tips for production and portfolio use. The notebook is recruiter-ready and modular, suitable for demonstrating advanced skills in clinical NLP, GenAI, and healthcare AI.
+
+### Mermaid Diagram: Advanced GenAI Features Workflow
+
+```mermaid
+flowchart TD
+	A[Start: Clinical Text] --> B[Entity Extraction (Bio_ClinicalBERT)]
+	A --> C[Retrieval-Augmented Generation (RAG)]
+	A --> D[Vector DB Search (Annoy/FAISS)]
+	B --> E[Prompt Engineering]
+	C --> E
+	D --> E
+	E --> F[Bias Detection & Safety]
+	F --> G[Cloud Integration (AWS S3)]
+	G --> H[PEFT/SFT Finetuning]
+	H --> I[Model Deployment]
+```
+
+This diagram summarizes the modular workflow and feature integration in the advanced notebook, from raw clinical text to model deployment and cloud integration.
