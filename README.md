@@ -4,12 +4,62 @@ A portfolio project demonstrating expertise in Natural Language Processing (NLP)
 
 ## Project Overview
 This repository showcases:
-- End-to-end clinical NLP workflow on synthetic EHR data
-- Advanced Named Entity Recognition (NER) using transformer-based models (Bio_ClinicalBERT)
-- Rule-based cohort phenotyping for disease risk
-- De-identification of clinical notes for privacy
-- Feature engineering and predictive modeling
-- Interactive Jupyter notebook workflow for demonstration
+
+## Agentic Architectures & Protocols Notebook
+
+## NLP Agents Architecture Overview
+
+- **Agent-to-Agent Protocols (A2A):** Agents communicate and collaborate using standardized message-passing protocols, allowing for distributed decision-making and workflow automation.
+- **Model Context Protocol (MCP):** Provides persistent, context-aware memory for agents, enabling them to track interactions, decisions, and patient-specific information over time.
+- **Retrieval-Augmented Generation (RAG):** Combines document retrieval with large language model (LLM) generation to answer complex clinical questions using both structured and unstructured data.
+- **Healthcare Data Standards:** Integrates FHIR and ICD parsers to ensure interoperability and compliance with healthcare data standards.
+- **VectorDB Integration:** Implements vector-based memory for agents, supporting semantic search, similarity matching, and efficient retrieval of clinical information.
+
+### Architectural Principles
+
+- **Modularity:** Each component is implemented as a separate module, making the architecture extensible and maintainable.
+- **Agentic Intelligence:** Agents act autonomously, collaborate, and share context, supporting complex multi-agent workflows.
+- **Interoperability:** Built-in support for healthcare standards ensures compatibility with real-world clinical systems.
+- **Scalability:** The architecture supports integration with cloud-native and MLOps workflows for production deployment.
+
+### Mermaid Diagram: NLP Agents Architecture
+
+```mermaid
+graph TD
+	A2A[Agent-to-Agent Protocols] --> MCP[Model Context Protocol]
+	A2A --> RAG[Retrieval-Augmented Generation]
+	A2A --> FHIR[Healthcare Data Standards]
+	A2A --> VectorDB[VectorDB Integration]
+	MCP --> RAG
+
+	MCP --> VectorDB
+	RAG --> FHIR
+	RAG --> VectorDB
+	FHIR --> VectorDB
+	subgraph Agents
+		A2A
+		MCP
+		RAG
+		FHIR
+		VectorDB
+	end
+```
+### Agentic Architecture Overview (Mermaid)
+
+```mermaid
+flowchart TD
+	A[ClaimsAgent] -- A2A Protocol --> B[EligibilityAgent]
+	B -- A2A Protocol --> C[ProviderMatchAgent]
+	A -- MCP Context --> D[Model Context Memory]
+	B -- MCP Context --> D
+	C -- MCP Context --> D
+	A -- RAG Query --> E[Document Retriever]
+	E -- Retrieved Docs --> F[LLM Generator]
+	F -- Answer --> A
+	D -- VectorDB --> G[Vector Memory]
+	G -- Memory Retrieval --> A
+	G -- Memory Retrieval --> B
+```
 
 ## Workflow Diagram
 
