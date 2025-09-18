@@ -132,6 +132,7 @@ graph TD
         FHIR
         VectorDB
     end
+        *   **Biomedical NER with Hugging Face:** Advanced entity extraction using the d4data/biomedical-ner-all model for diseases, symptoms, medications, and more. See notebook for usage and output examples.
 ```
 
 ### Example Agent Workflow
@@ -144,6 +145,8 @@ flowchart TD
     C -- MCP Context --> D
     A -- RAG Query --> E[Document Retriever]
     E -- Retrieved Docs --> F[LLM Generator]
+            # For biomedical NER, ensure you have torch and transformers installed:
+            pip install torch transformers
     F -- Answer --> A
     D -- VectorDB --> G[Vector Memory]
     G -- Memory Retrieval --> A
@@ -161,6 +164,24 @@ flowchart TD
     C --> D[Transformer-based NER: Bio_ClinicalBERT]
     C --> E[spaCy NER]
     C --> F[Rule-based Extraction]
+        #### Example: Biomedical NER Usage
+        The notebook demonstrates how to use Hugging Face's `d4data/biomedical-ner-all` pipeline for biomedical entity extraction:
+
+        ```python
+        from transformers import pipeline
+        biomed_ner = pipeline('ner', model='d4data/biomedical-ner-all', aggregation_strategy='simple')
+        note = "John Doe, a 45-year-old male, was diagnosed with diabetes on 2022-03-15."
+        entities = biomed_ner(note)
+        for ent in entities:
+            print(f"Entity: {ent['word']} | Type: {ent['entity_group']} | Score: {ent['score']:.2f}")
+        ```
+
+        **Example Output:**
+        ```
+        Entity: 45 - year - old | Type: Age | Score: 0.99
+        Entity: diabetes | Type: Disease_disorder | Score: 1.00
+        Entity: 03 | Type: Date | Score: 1.00
+        ```
     D --> G[Feature Engineering]
     E --> G
     F --> G
